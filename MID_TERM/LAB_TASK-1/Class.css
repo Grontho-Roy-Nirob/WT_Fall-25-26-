@@ -42,7 +42,7 @@ select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    transition: border-color 0.3s;
+    
 }
 
 button{   
