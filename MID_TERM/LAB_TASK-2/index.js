@@ -20,13 +20,18 @@ function handleSubmit() {
     }
 
     if (!email.includes("@")) {
-        errorDiv.innerHTML = " Email must contain @.";
-        return false;
+        alert(" Email must contain @.");
+        return;
     }
 
     if (isNaN(phoneNumber) || phoneNumber === "") {
-        errorDiv.innerHTML = "Phone number must contain only digits";
-        return false;
+        alert("Phone number must contain only digits");
+        return ;
+    }
+
+    if(password !== confirmPassword){
+        alert("Password don't match");
+        return ;
     }
 
 
