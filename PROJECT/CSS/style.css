@@ -60,7 +60,6 @@ body {
     margin: 20px;
 }
 
-/* Banner Content Start */
 .banner-content h1 {
     font-size: 3rem;
     margin-bottom: 15px;
@@ -86,4 +85,4 @@ body {
 .banner-btn:hover {
     background-color: #1e88e5;
 }
-/* Banner Content End */
+/* Banner End */
