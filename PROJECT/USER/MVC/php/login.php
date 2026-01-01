@@ -27,18 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Css/login.css">
 </head>
 <body>
 
 <div class="container">
     <h1>Login</h1>
-
-    <?php
-    if (!empty($successMessage)) {
-        echo "<p class='success'>" . $successMessage . "</p>";
-    }
-    ?>
 
     <form method="post" action="">
         <div class="form-group">
@@ -50,14 +44,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Password</label>
             <input type="password" name="password" value="">
-            <span class="error"><php $passwordError ?></span>
+            <span class="error"><?php $passwordError ?></span>
         </div>
 
         <button type="submit">Login</button>
     </form>
 
+    <?php
+    if (!empty($successMessage)) {
+        echo "<p class='success'>" . $successMessage . "</p>";
+    }
+    ?>
+
     <p class="register-text">
-        Not registered yet? <a href="register.php">Register here</a>
+        Not registered yet? <a href="../php/register.php">Register here</a>
     </p>
 </div>
 

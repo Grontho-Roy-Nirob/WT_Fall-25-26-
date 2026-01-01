@@ -21,10 +21,11 @@ h1 {
 
 label {
     display: block;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Arial, sans-serif; 
+    text-align: left;
     margin: 10px 0 5px;
 }
-
 input, button {
     width: 100%;
     padding: 10px;
