@@ -16,7 +16,7 @@
              <nav class="nav">
                 <a href="#">Home</a>
                 <a href="#">Books</a>
-                <a href="#">Login</a>
+                <a href="../php/login.php">Login</a>
                 <a href="../php/register.php">Register</a>
                 <a href="#footer">Contact</a>
              </nav>
