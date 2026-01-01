@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Bookstore Management System</title>
-    <link rel="stylesheet" href="Css/bookzone.css">
+    <link rel="stylesheet" href="../Css/dashboard.css">
 </head>
 <body>
      <!-- Header Start -->
         <header class="header">
              <div class="logo">
-                <img src="Picture/logo.jpg" alt="BookZone Logo">
+                <img src="../Picture/logo.jpg" alt="BookZone Logo">
                 <span>BookZone</span>
              </div>
              <nav class="nav">
                 <a href="#">Home</a>
                 <a href="#">Books</a>
                 <a href="#">Login</a>
-                <a href="#">Register</a>
                 <a href="#footer">Contact</a>
              </nav>
 
@@ -40,7 +39,7 @@
         <div class="search-container">
             <input type="text" placeholder="Search Books" class="search-bar">
             <button class="search-btn">
-            <img src="Picture/search.png" alt="Search" class="search-icon">
+            <img src="../Picture/search.png" alt="Search" class="search-icon">
         </button>
      </div>
 </section>   
