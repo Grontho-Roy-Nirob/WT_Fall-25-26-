@@ -81,7 +81,7 @@ input[type="submit"]:hover {
 
 
 .error {
-    color: red; 
+    /* color: red;  */
     font-size: 15px;
     text-align: center;
     margin-top: 10px;
