@@ -79,6 +79,14 @@ input[type="submit"]:hover {
     margin-top: 10px;
 }
 
+#success-msg {
+    color: green;          
+    font-size: 18px;      
+    text-align: center; 
+    margin-top: 10px;    
+    font-weight: bold;
+}
+
 
 .error {
     color: red; 

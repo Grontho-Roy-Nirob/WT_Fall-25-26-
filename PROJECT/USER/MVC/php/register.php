@@ -51,9 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES ('$username', '$hashPassword')";
 
         if ($conn->query($sql)) {
-            $success = "Registration complete";
+            $success = "Registration complete. Redirecting to login page...";
             $valid_username = $username;
             $username = $password = ""; 
+
+            
         } else {
             $error = "Error: " . $conn->error;
         }
@@ -96,8 +98,19 @@ if (!empty($valid_username)) {
 }
 ?>
 
-<p class="success"><?php echo $success; ?></p>
+<p class="success" id="success-msg"><?php echo $success; ?></p>
 <p class="error"><?php echo $error; ?></p>
+
+<script>
+window.onload = function() {
+    var successMsg = document.getElementById("success-msg");
+    if (successMsg && successMsg.textContent.trim() !== "") {
+        setTimeout(function() {
+            window.location.href = '../php/login.php';
+        }, 2000);
+    }
+};
+</script>
 
 </body>
 </html>
