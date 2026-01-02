@@ -4,7 +4,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Main container */
+/* ===== Main Container ===== */
 .container {
     width: 100%;
 }
@@ -15,7 +15,7 @@ body {
     height: 100vh;
     background-color: #5a3ea1;
     padding: 20px;
-    float: left;   /* sidebar goes to left */
+    float: left;        /* move sidebar to left */
 }
 
 .sidebar h2 {
@@ -39,7 +39,7 @@ body {
 
 /* ===== Main Content ===== */
 .content {
-    margin-left: 270px; /* sidebar width + gap */
+    margin-left: 270px;   /* space for sidebar */
     padding: 20px;
 }
 
@@ -47,34 +47,32 @@ body {
     margin-bottom: 20px;
 }
 
-/* ===== Cards Section ===== */
+/* ===== Cards Wrapper ===== */
 .cards {
     width: 100%;
 }
 
-/* Single Card */
+/* ===== Card Design ===== */
 .card {
-    width: 250px;
+    width: 260px;              /* same width */
+    height: 180px;             /* same height */
     background-color: white;
     padding: 15px;
     margin: 10px;
-    float: left;    /* cards stay side by side */
+    float: left;               /* cards align side by side */
     border-radius: 8px;
     box-shadow: 2px 2px 8px gray;
 }
 
+/* Card title */
 .card h3 {
     margin-top: 0;
     color: #5a3ea1;
+    font-size: 18px;
 }
 
+/* Card text */
 .card p {
     font-size: 14px;
-}
-
-/* Clear float after cards */
-.cards::after {
-    content: "";
-    display: block;
-    clear: both;
+    line-height: 1.4;
 }
