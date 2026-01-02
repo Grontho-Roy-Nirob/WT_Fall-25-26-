@@ -25,7 +25,7 @@
 
     <!-- RIGHT CONTENT -->
     <div class="content">
-        <h1 align = "center">Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
         <hr>
 
         <div class="cards">
