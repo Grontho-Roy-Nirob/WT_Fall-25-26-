@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $row['password'])) {
 
                 $_SESSION["username"] = $username;
-                setcookie("username", $username, time() + 86400, "/"); // 1 day
+                setcookie("username", $username, time() + 86400, "/"); 
 
                 $successMessage = "Login successful! Redirecting to dashboard...";
                 echo "<p class='success'>$successMessage</p>";
