@@ -14,11 +14,10 @@
                 <span>BookZone</span>
              </div>
              <nav class="nav">
-                <a href="#">Home</a>
-                <a href="#">Books</a>
+                <a href="../php/index.php">Home</a>
+                <a href="../php/books.php">Books</a>
                 <a href="../php/login.php">Login</a>
                 <a href="#">Logout</a>
-                <!-- <a href="../php/register.php">Register</a> -->
                 <a href="#footer">Contact</a>
              </nav>
 
@@ -28,13 +27,14 @@
 
     <!-- Main Start -->
      <main>
-     <section class="banner">
-        <div class="banner-content">
-            <h1>Discover Your Next Favorite Book</h1>
-            <p>Explore new arrivals and special discounts every week!</p>
-            <a href="#" class="banner-btn">Buy Now</a>
-        </div>
-     </section>
+    <section class="banner">
+    <div class="banner-content">
+        <h1>Discover Your Next Favorite Book</h1>
+        <p>Explore new arrivals and special discounts every week!</p>
+        <a href="#" id="buyNowBtn" class="banner-btn">Buy Now</a>
+
+    </div>
+</section>
     
     <!-- Search Bar -->
      <section class="search-section">
@@ -77,6 +77,8 @@
         </div>
     </footer>
    <!-- Footer End -->
+
+   <script src="../Javascript/dashboard.js"></script>
 
 </body>
 </html>
