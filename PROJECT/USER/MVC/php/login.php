@@ -46,8 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 setcookie("username", $username, time() + 86400, "/"); // 1 day
 
                 $successMessage = "Login successful! Redirecting to dashboard...";
+                echo "<p class='success'>$successMessage</p>";
                 echo "<script>
-                     redirectTo('../php/index.php', 2000);
+                    setTimeout(function() {
+                        window.location.href = '../php/index.php';
+                    }, 2000);
                 </script>";
                 exit();
             } else {

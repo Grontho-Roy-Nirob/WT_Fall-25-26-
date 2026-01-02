@@ -1,11 +1,25 @@
 <?php
 session_start();
+
 session_unset();
-
 session_destroy();
-
 setcookie("username", "", time() - 3600, "/");
-
-header("Location: ../php/logout.php");
-exit();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <link rel="stylesheet" href="../Css/login.css">
+</head>
+<body>
+
+<div class="container">
+    <p id="logout-message">You have been logged out. Redirecting to login page...</p>
+</div>
+
+<script src="../Javascript/logout.js"></script>
+
+</body>
+</html>
