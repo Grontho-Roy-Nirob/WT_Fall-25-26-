@@ -37,6 +37,20 @@ body {
     font-weight: bold;
 }
 
+/* Welcome Text Style */
+.welcome-text {
+    background-color: #2575fc; /* nice blue background */
+    color: #fff; /* text color white */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px auto;
+    width: fit-content; /* only as wide as the text */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 .nav a {
     margin-left: 20px;
     text-decoration: none;

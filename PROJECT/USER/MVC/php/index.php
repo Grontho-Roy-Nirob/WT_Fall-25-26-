@@ -4,6 +4,17 @@ $loggedUser = "";
 if (isset($_GET['user'])) {
     $loggedUser = $_GET['user'];
 }
+
+session_start();
+
+// Check if user is logged in via session or cookie
+$loggedUser = "";
+
+if (isset($_SESSION["username"])) {
+    $loggedUser = $_SESSION["username"];
+} elseif (isset($_COOKIE["username"])) {
+    $loggedUser = $_COOKIE["username"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,18 +33,23 @@ if (isset($_GET['user'])) {
         <span>BookZone</span>
     </div>
 
+    <?php if (!empty($loggedUser)) { ?>
+        <h2 class="welcome-text">
+            Welcome, <?php echo htmlspecialchars($loggedUser); ?>
+        </h2>
+    <?php } ?>
+
     <nav class="nav">
         <a href="../php/index.php">Home</a>
         <a href="../php/books.php">Books</a>
 
         <?php if (empty($loggedUser)) { ?>
+            <!-- If no user logged in, show Login -->
             <a href="../php/login.php">Login</a>
         <?php } else { ?>
-            <a href="#" class="disabled-link">Login</a>
-            <a href="../php/login.php">Logout</a>
+            <!-- If user is logged in, show Logout -->
+            <a href="../php/logout.php">Logout</a>
         <?php } ?>
-
-        <a href="#">Logout</a>
 
         <a href="#footer">Contact</a>
     </nav>
@@ -43,19 +59,11 @@ if (isset($_GET['user'])) {
 <!-- Main Start -->
 <main>
 
-<section class="banner">
+ <section class="banner">
     <div class="banner-content">
-
-        <?php if (!empty($loggedUser)) { ?>
-            <h2 class="welcome-text">
-                Welcome, <?php echo htmlspecialchars($loggedUser); ?>
-            </h2>
-        <?php } else { ?>
-            <h1>Discover Your Next Favorite Book</h1>
-            <p>Explore new arrivals and special discounts every week!</p>
-        <?php } ?>
-
-        <a href="#" class="banner-btn">Buy Now</a>
+        <h1>Discover Your Next Favorite Book</h1>
+        <p>Explore new arrivals and special discounts every week!</p>
+        <a href="#" id="buyNowBtn" class="banner-btn">Buy Now</a>
     </div>
 </section>
 

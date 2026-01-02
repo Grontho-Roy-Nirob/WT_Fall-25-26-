@@ -37,23 +37,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "SELECT * FROM registereduser WHERE username='$username'";
         $result = $conn->query($sql);
 
+        if ($result->num_rows == 1) {        
+            $row = $result->fetch_assoc();  
+
             if (password_verify($password, $row['password'])) {
 
                 $_SESSION["username"] = $username;
-
-                setcookie("username", $username, time() + 86400, "/"); // 86400 = 1 day
+                setcookie("username", $username, time() + 86400, "/"); // 1 day
 
                 $successMessage = "Login successful! Redirecting to dashboard...";
-                header("Location: ../php/index.php");
+                echo "<script>
+                     redirectTo('../php/index.php', 2000);
+                </script>";
                 exit();
             } else {
                 $errorMessage = "Invalid password";
             }
         } else {
             $errorMessage = "Username not found";
-    }
-    
+        }
+    } 
 }
+
 ?>
 
 <!DOCTYPE html>
