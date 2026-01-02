@@ -16,7 +16,7 @@ setcookie("username", "", time() - 3600, "/");
 <body>
 
 <div class="container">
-    <p id="logout-message">You have been logged out. Redirecting to login page...</p>
+    <p id="logout-message">You have been logged out. Redirecting to dashboard...</p>
 </div>
 
 <script>
