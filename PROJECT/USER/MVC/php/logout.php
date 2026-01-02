@@ -24,7 +24,7 @@ window.onload = function() {
     var logoutMsg = document.getElementById("logout-message");
     if (logoutMsg) {
         setTimeout(function() {
-            window.location.href = '../php/login.php';
+            window.location.href = '../php/index.php';
         }, 2000); 
     }
 };
