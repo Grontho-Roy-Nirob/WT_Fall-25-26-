@@ -65,5 +65,7 @@
 
 </div>
 
+  <script src="../Js/viewuser.js"></script>
+
 </body>
 </html>
