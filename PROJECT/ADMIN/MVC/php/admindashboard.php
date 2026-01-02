@@ -15,7 +15,7 @@
     <div class="sidebar">
         <h2>Admin Menu</h2>
         <hr>
-        <a href="#">View Registered Users</a>
+        <a href="../php/viewuser.php">View Registered Users</a>
         <a href="#">Assign Discount to Books</a>
         <a href="#">View Customer Orders</a>
         <a href="#">Low Stock Alert</a>
@@ -30,7 +30,7 @@
 
         <div class="cards">
 
-            <div class="card">
+            <div class="card" id="user-card">
                 <h3>Registered Users</h3>
                 <p>See all users who registered on the website.</p>
             </div>
