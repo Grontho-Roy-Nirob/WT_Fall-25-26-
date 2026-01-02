@@ -1,23 +1,45 @@
 <?php
+include "../Db/dbregister.php";
+
 $username = "";
 $usernameError = $passwordError = "";
-$successMessage = "";
+$successMessage = $errorMessage = "";
+
+function test_input($data) {
+    return trim($data);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["username"])) {
         $usernameError = "Username is required";
     } else {
-        $username = trim($_POST["username"]);
+        $username = test_input($_POST["username"]);
     }
 
     if (empty($_POST["password"])) {
         $passwordError = "Password is required";
+    } else {
+        $password = test_input($_POST["password"]);
     }
 
     if (empty($usernameError) && empty($passwordError)) {
-        $successMessage = "Login successful!";
-        $username = "";
+
+        $sql = "SELECT * FROM registereduser WHERE username='$username'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+
+            if (password_verify($password, $row['password'])) {
+                $successMessage = "Login successful!";
+                $username = "";
+            } else {
+                $errorMessage = "Invalid password";
+            }
+        } else {
+            $errorMessage = "Username not found";
+        }
     }
 }
 ?>
@@ -37,14 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="post" action="">
         <div class="form-group">
             <label>Username</label>
-            <input type="text" name="username" value="<?php $username ?>">
-            <span class="error"><?php $usernameError ?></span>
+            <input type="text" name="username" value="<?php echo $username; ?>">
+            <span class="error"><?php echo $usernameError; ?></span>
         </div>
 
         <div class="form-group">
             <label>Password</label>
-            <input type="password" name="password" value="">
-            <span class="error"><?php $passwordError ?></span>
+            <input type="password" name="password">
+            <span class="error"><?php echo $passwordError; ?></span>
         </div>
 
         <button type="submit">Login</button>
@@ -52,7 +74,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php
     if (!empty($successMessage)) {
-        echo "<p class='success'>" . $successMessage . "</p>";
+        echo "<p class='success'>$successMessage</p>";
+    }
+
+    if (!empty($errorMessage)) {
+        echo "<p class='error'>$errorMessage</p>";
     }
     ?>
 
