@@ -3,7 +3,7 @@ session_start();
 
 session_unset();
 session_destroy();
-setcookie("username", "", time() - 3600, "/");
+setcookie("username", "", time() - 3600, "/"); 
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ setcookie("username", "", time() - 3600, "/");
 <head>
     <meta charset="UTF-8">
     <title>Logout</title>
-    <link rel="stylesheet" href="../Css/login.css">
+    <link rel="stylesheet" href="../Css/logout.css"> 
 </head>
 <body>
 
@@ -19,7 +19,16 @@ setcookie("username", "", time() - 3600, "/");
     <p id="logout-message">You have been logged out. Redirecting to login page...</p>
 </div>
 
-<script src="../Javascript/logout.js"></script>
+<script>
+window.onload = function() {
+    var logoutMsg = document.getElementById("logout-message");
+    if (logoutMsg) {
+        setTimeout(function() {
+            window.location.href = '../php/login.php';
+        }, 2000); 
+    }
+};
+</script>
 
 </body>
 </html>
