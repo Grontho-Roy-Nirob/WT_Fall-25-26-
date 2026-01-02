@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Css/admindashboard.css">
 </head>
 <body>
 
@@ -14,6 +14,7 @@
     <!-- LEFT MENU -->
     <div class="sidebar">
         <h2>Admin Menu</h2>
+        <hr>
         <a href="#">View Registered Users</a>
         <a href="#">Assign Discount to Books</a>
         <a href="#">View Customer Orders</a>
@@ -24,7 +25,8 @@
 
     <!-- RIGHT CONTENT -->
     <div class="content">
-        <h1>Admin Dashboard</h1>
+        <h1 align = "center">Admin Dashboard</h1>
+        <hr>
 
         <div class="cards">
 

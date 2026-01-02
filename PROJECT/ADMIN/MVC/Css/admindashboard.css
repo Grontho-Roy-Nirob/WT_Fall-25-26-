@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #5a3ea1;
+    padding: 20px;
+    float: left;   /* sidebar goes to left */
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #6f52b8;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #8369c7;
+}
+
+/* ===== Main Content ===== */
+.content {
+    margin-left: 270px; /* sidebar width + gap */
+    padding: 20px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+/* ===== Cards Section ===== */
+.cards {
+    width: 100%;
+}
+
+/* Single Card */
+.card {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    float: left;    /* cards stay side by side */
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px gray;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #5a3ea1;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+/* Clear float after cards */
+.cards::after {
+    content: "";
+    display: block;
+    clear: both;
+}
