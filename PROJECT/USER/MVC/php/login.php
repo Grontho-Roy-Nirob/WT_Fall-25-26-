@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+// If user is already logged in, redirect to dashboard
+if (isset($_SESSION["username"])) {
+    header("Location: ../php/index.php");
+    exit();
+}
+
 include "../Db/dbregister.php";
 
 $username = "";
@@ -28,19 +37,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "SELECT * FROM registereduser WHERE username='$username'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
-
             if (password_verify($password, $row['password'])) {
-                $successMessage = "Login successful!";
-                $username = "";
+
+                $_SESSION["username"] = $username;
+
+                setcookie("username", $username, time() + 86400, "/"); // 86400 = 1 day
+
+                $successMessage = "Login successful! Redirecting to dashboard...";
+                header("Location: ../php/index.php");
+                exit();
             } else {
                 $errorMessage = "Invalid password";
             }
         } else {
             $errorMessage = "Username not found";
-        }
     }
+    
 }
 ?>
 
