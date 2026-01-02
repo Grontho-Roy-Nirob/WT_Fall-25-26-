@@ -34,7 +34,7 @@ if (isset($_SESSION["username"])) {
 
     <?php if (!empty($loggedUser)) { ?>
         <h2 class="welcome-text">
-            Welcome, <?php echo $loggedUser; ?>
+            Welcome, <?php echo $loggedUser; ?>!!
         </h2>
     <?php } ?>
 
