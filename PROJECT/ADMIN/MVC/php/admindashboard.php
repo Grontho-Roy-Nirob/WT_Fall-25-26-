@@ -18,7 +18,7 @@
         <a href="../php/viewuser.php">View Registered Users</a>
         <a href="#">Assign Discount to Books</a>
         <a href="#">View Customer Orders</a>
-        <a href="#">Low Stock Alert</a>
+        <a href="#">Book Modification</a>
         <a href="#">Generate Sales Report</a>
         <a href="#">Category Management</a>
     </div>
@@ -46,8 +46,8 @@
             </div>
 
             <div class="card">
-                <h3>Low Stock Alert</h3>
-                <p>Check books that are running out of stock.</p>
+                <h3>Book Modification</h3>
+                <p>Add,Update & delete books.Check books that are running out of stock.</p>
             </div>
 
             <div class="card">
