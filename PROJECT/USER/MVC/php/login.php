@@ -1,8 +1,6 @@
 <?php
-
 session_start();
 
-// If user is already logged in, redirect to dashboard
 if (isset($_SESSION["username"])) {
     header("Location: ../php/index.php");
     exit();
@@ -37,31 +35,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "SELECT * FROM registereduser WHERE username='$username'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows == 1) {        
-            $row = $result->fetch_assoc();  
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
 
             if (password_verify($password, $row['password'])) {
 
                 $_SESSION["username"] = $username;
-                setcookie("username", $username, time() + 86400, "/"); 
+                setcookie("username", $username, time() + 86400, "/");
 
                 $successMessage = "Login successful! Redirecting to dashboard...";
-                echo "<p class='success'>$successMessage</p>";
+
+                // JavaScript redirect after 2 seconds
                 echo "<script>
                     setTimeout(function() {
                         window.location.href = '../php/index.php';
                     }, 2000);
                 </script>";
-                exit();
+
             } else {
                 $errorMessage = "Invalid password";
             }
         } else {
             $errorMessage = "Username not found";
         }
-    } 
+    }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="post" action="">
         <div class="form-group">
             <label>Username</label>
-            <input type="text" name="username" value="<?php echo $username; ?>">
+            <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
             <span class="error"><?php echo $usernameError; ?></span>
         </div>
 
@@ -92,13 +90,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Login</button>
     </form>
 
+    <!-- Global messages -->
     <?php
     if (!empty($successMessage)) {
-        echo "<p class='success'>$successMessage</p>";
+        echo "<p class='successmsg'>$successMessage</p>";
     }
 
     if (!empty($errorMessage)) {
-        echo "<p class='error'>$errorMessage</p>";
+        echo "<p class='errormsg'>$errorMessage</p>";
     }
     ?>
 

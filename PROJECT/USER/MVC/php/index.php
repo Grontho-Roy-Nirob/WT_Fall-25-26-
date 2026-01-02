@@ -7,7 +7,6 @@ if (isset($_GET['user'])) {
 
 session_start();
 
-// Check if user is logged in via session or cookie
 $loggedUser = "";
 
 if (isset($_SESSION["username"])) {
