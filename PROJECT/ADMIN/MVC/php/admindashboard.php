@@ -20,7 +20,7 @@
         <a href="../php/order.php">View Customer Orders</a>
         <a href="../php/bookmodification.php">Book Modification</a>
         <a href="../php/sales.php">Generate Sales Report</a>
-        <a href="#">Category Management</a>
+        <a href="../php/category.php">Category Management</a>
     </div>
 
     <!-- RIGHT CONTENT -->
@@ -55,7 +55,7 @@
                 <p>View daily, monthly and yearly sales.</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="category-card">
                 <h3>Category Management</h3>
                 <p>Add, edit or delete book categories.</p>
             </div>
@@ -70,6 +70,6 @@
   <script src="../Js/order.js"></script>
   <script src="../Js/bookmodification.js"></script>
   <script src="../Js/sales.js"></script>
-
+  <script src="../Js/category.js"></script>
 </body>
 </html>
