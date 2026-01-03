@@ -18,8 +18,8 @@
         <a href="../php/viewuser.php">View Registered Users</a>
         <a href="../php/discount.php">Assign Discount to Books</a>
         <a href="../php/order.php">View Customer Orders</a>
-        <a href="#">Book Modification</a>
-        <a href="#">Generate Sales Report</a>
+        <a href="../php/bookmodification.php">Book Modification</a>
+        <a href="../php/sales.php">Generate Sales Report</a>
         <a href="#">Category Management</a>
     </div>
 
@@ -45,7 +45,7 @@
                 <p>View all orders placed by customers.</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="book-card">
                 <h3>Book Modification</h3>
                 <p>Add,Update & delete books.Check books that are running out of stock.</p>
             </div>
@@ -68,6 +68,7 @@
   <script src="../Js/viewuser.js"></script>
   <script src="../Js/discount.js"></script>
   <script src="../Js/order.js"></script>
+  <script src="../Js/bookmodification.js"></script>
 
 </body>
 </html>
