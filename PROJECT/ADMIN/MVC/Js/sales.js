@@ -1,7 +1,7 @@
-const orderCard = document.getElementById("order-card");
+const salesCard = document.getElementById("sales-card");
 
 function goToPage() {
-    window.location.href = "../php/order.php";
+    window.location.href = "../php/sales.php";
 }
 
-orderCard.addEventListener("click", goToPage);
+salesCard.addEventListener("click", goToPage);

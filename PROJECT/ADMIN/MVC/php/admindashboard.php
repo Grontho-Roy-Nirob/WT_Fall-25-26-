@@ -50,7 +50,7 @@
                 <p>Add,Update & delete books.Check books that are running out of stock.</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="sales-card">
                 <h3>Sales Report</h3>
                 <p>View daily, monthly and yearly sales.</p>
             </div>
@@ -69,6 +69,7 @@
   <script src="../Js/discount.js"></script>
   <script src="../Js/order.js"></script>
   <script src="../Js/bookmodification.js"></script>
+  <script src="../Js/sales.js"></script>
 
 </body>
 </html>
