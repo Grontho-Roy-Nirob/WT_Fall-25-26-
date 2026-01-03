@@ -1,11 +1,28 @@
 <?php
-// dashboard.php
+
+session_start();
+
+$loggedUser = "";
+
+if (isset($_SESSION["username"])) {
+    $loggedUser = $_SESSION["username"];
+} elseif (isset($_COOKIE["username"])) {
+    $loggedUser = $_COOKIE["username"];
+}
+
+// Redirect normal user trying to access admin dashboard
+if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
+    header("Location: ../../USER/MVC/php/index.php");
+    exit();
+}
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../Css/admindashboard.css">
+    <link rel="stylesheet" href="../Css/admindasboard.css">
 </head>
 <body>
 
@@ -25,7 +42,15 @@
 
     <!-- RIGHT CONTENT -->
     <div class="content">
-        <h1>Admin Dashboard</h1>
+        <?php if (!empty($loggedUser)) { ?>
+            <h2 class="welcome-text">
+                Welcome, <?php echo $loggedUser; ?>!!
+            </h2>
+        <?php } ?>
+
+            <h1>Admin Dashboard</h1>
+            <a class="logout" href="../../../USER/MVC/php/logout.php">Logout</a>
+    
         <hr>
 
         <div class="cards">

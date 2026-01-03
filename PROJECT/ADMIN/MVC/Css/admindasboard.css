@@ -4,11 +4,9 @@ body {
     background-color: #f4f4f4;
 }
 
-
 .container {
     width: 100%;
 }
-
 
 .sidebar {
     width: 250px;
@@ -57,6 +55,38 @@ body {
     margin-bottom: 30px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 12px 25px;
+    margin-bottom: 15px;
+    border: 2px solid #5a3ea1;
+    border-radius: 8px;
+    background-color: #5a3ea1;    
+    color: white;                  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.logout {
+    float: right;            
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    color: #5a3ea1;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #5a3ea1;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.logout:hover {
+    background-color: #be141f;
+    color: white;
+}
+
 
 .content hr {
     width: 80%;
