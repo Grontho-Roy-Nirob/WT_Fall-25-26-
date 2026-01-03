@@ -17,7 +17,7 @@
         <hr>
         <a href="../php/viewuser.php">View Registered Users</a>
         <a href="../php/discount.php">Assign Discount to Books</a>
-        <a href="#">View Customer Orders</a>
+        <a href="../php/order.php">View Customer Orders</a>
         <a href="#">Book Modification</a>
         <a href="#">Generate Sales Report</a>
         <a href="#">Category Management</a>
@@ -40,7 +40,7 @@
                 <p>Add or update book discounts easily.</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="order-card">
                 <h3>Customer Orders</h3>
                 <p>View all orders placed by customers.</p>
             </div>
@@ -67,6 +67,7 @@
 
   <script src="../Js/viewuser.js"></script>
   <script src="../Js/discount.js"></script>
+  <script src="../Js/order.js"></script>
 
 </body>
 </html>

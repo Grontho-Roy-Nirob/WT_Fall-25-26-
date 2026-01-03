@@ -1,7 +1,7 @@
 const userCard = document.getElementById("user-card");
 
-function goToUsersPage() {
+function goToPage() {
     window.location.href = '../php/viewuser.php';
 }
 
-userCard.addEventListener('click', goToUsersPage);
+userCard.addEventListener('click', goToPage);

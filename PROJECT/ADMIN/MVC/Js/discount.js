@@ -1,7 +1,7 @@
 const discountCard = document.getElementById("discount-card");
 
-function goToDiscountPage() {
+function goToPage() {
     window.location.href = "../php/discount.php";
 }
 
-discountCard.addEventListener("click", goToDiscountPage);
+discountCard.addEventListener("click", goToPage);
