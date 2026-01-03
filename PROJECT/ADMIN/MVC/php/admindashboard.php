@@ -16,7 +16,7 @@
         <h2>Admin Menu</h2>
         <hr>
         <a href="../php/viewuser.php">View Registered Users</a>
-        <a href="#">Assign Discount to Books</a>
+        <a href="../php/discount.php">Assign Discount to Books</a>
         <a href="#">View Customer Orders</a>
         <a href="#">Book Modification</a>
         <a href="#">Generate Sales Report</a>
@@ -35,7 +35,7 @@
                 <p>See all users who registered on the website.</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="discount-card">
                 <h3>Discount Management</h3>
                 <p>Add or update book discounts easily.</p>
             </div>
@@ -66,6 +66,7 @@
 </div>
 
   <script src="../Js/viewuser.js"></script>
+  <script src="../Js/discount.js"></script>
 
 </body>
 </html>
