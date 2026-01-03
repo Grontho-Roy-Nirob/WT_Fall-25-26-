@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+$loginRedirectMsg = "";
+
+if (isset($_SESSION['login_error'])) {
+    $loginRedirectMsg = $_SESSION['login_error'];
+    unset($_SESSION['login_error']);
+}
+
 
 if (isset($_SESSION["username"])) {
     if (str_starts_with($_SESSION["username"], "@admin")) {
@@ -109,6 +116,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="container">
     <h1>Login</h1>
+
+    <?php
+    if (!empty($loginRedirectMsg)) {
+    echo "<p class='errormsg'>$loginRedirectMsg</p>";}
+    ?>
 
     <form method="post" action="">
         <div class="form-group">

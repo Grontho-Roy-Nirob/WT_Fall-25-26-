@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #a8caed;
+    padding: 30px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background: #2671f2;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: #1642d2;
+    transform: translateY(-2px);
+}
+
+
+/* Container */
+.details-container {
+    display: flex;
+    gap: 40px;
+    background: rgb(197, 246, 250);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.book-image img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Info */
+.book-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.final-price {
+    font-size: 22px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Button */
+.cart-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #2671f2;
+    color: rgb(14, 13, 13);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+    background: #3329c1;
+}
